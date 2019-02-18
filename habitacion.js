@@ -11,6 +11,7 @@ class Habitacion {
 		// Cada 10 segundos sube o baja aleatoriamente la temperatura 
 		// hasta +/- un grado:
 		setInterval(() => {
+			//variacion aleatoria de temperatura simula los cambios de estacion
 			this.temperatura += Math.random() * 2 - 1,
 			console.log(`Cambio aleatorio a ${this.temperatura.toFixed(1)}ºC`);
 		}, 10000);

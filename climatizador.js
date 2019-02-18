@@ -5,6 +5,7 @@ const DELTA = 0.1;
 
 
 // Clase Climatizador.
+// Acondicionador de aire
 // Modifica la temperatura de una habitacion.
 // Metodos:
 //    enfriar

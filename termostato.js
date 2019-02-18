@@ -7,8 +7,9 @@ const MARGEN_ERROR = 0.3;
 
 
 // Clase Termostato.
+// **Sirve oara mantener autom'aticamente una determinanda temperatura
 // Mira la temperatura de una habitacion y avisa si hace demasiado calor o frio.
-// Tambien informa sobre la temperatura actual de la habitacion.
+// **Tambien informa sobre la temperatura actual de la habitacion.
 // Metodos:
 //    indicarTemperaturaIdeal
 //    encender
@@ -40,7 +41,8 @@ class Termostato  extends EventEmitter {
 		clearInterval(this.intervalId);
 		this.intervalId = setInterval(() => {
 			this.emit('tic', this.habitacion.temperatura);
-
+           
+           	//MARGEN_ERROR = 0.3;
 			if (this.habitacion.temperatura > this.temperaturaIdeal+MARGEN_ERROR) {
 				this.emit('muchocalor');
 			} else if (this.habitacion.temperatura < this.temperaturaIdeal-MARGEN_ERROR) {
